@@ -2,15 +2,8 @@ import streamlit as st
 import pandas as pd 
 import requests 
 
-#For using my API key, you can use your own API key 
-import os
-from dotenv import load_dotenv
-
-# Load environment variables from the .env file
-load_dotenv()
-
 # Access the API key
-api_key = os.getenv("API_KEY")
+api_key = st.secrets["API_KEY"]
 
 
 if 'data' not in st.session_state:
